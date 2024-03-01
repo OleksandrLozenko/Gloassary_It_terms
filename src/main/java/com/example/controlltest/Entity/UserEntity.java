@@ -1,10 +1,14 @@
 package com.example.controlltest.Entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @Table(name = "users")
@@ -21,11 +25,6 @@ public class UserEntity {
 
     @Column(name = "role", nullable = false)
     private String role;
-
-    // Конструкторы, геттеры и сеттеры
-
-    public UserEntity() {
-    }
 
     public UserEntity(String username, String password, String role) {
         this.username = username;
